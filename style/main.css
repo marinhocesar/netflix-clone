@@ -1,6 +1,11 @@
 :root {
-    --vermelho: #E50914;
-    --preta: #141414;
+    --destaque_claro: #dda76a;
+    --escuro: #08111a;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url(fonts/Anton-Regular.ttf);
 }
 
 * {
@@ -11,7 +16,7 @@
 
 /*elementos base*/
 body {
-    background: var(--preta);
+    background:var(--escuro);
     font-family: 'Arial', Times, serif;
     color: white;
 }
@@ -24,8 +29,8 @@ header .container {
 }
 
 header .logo {
-    color: var(--vermelho);
-    font-family: 'Arial Black', Times;
+    color: var(--destaque_claro);
+    font-family: Anton;
     font-size: 40px;
 
 }
@@ -40,11 +45,11 @@ header nav a:hover {
     color: #fff;
 }
 
-/*filme principal*/
+/*aula principal*/
 
-.filme-principal {
+.aula-principal {
     font-size: 16px;
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/capa/mr_fox.jpg');
+    background: linear-gradient(rgba(0,0,0,.20),rgba(0,0,0,.90)100%), url('/img/eye.jpeg');
 
     height: 400px;
     background-size: cover;
@@ -55,14 +60,14 @@ header nav a:hover {
     align-items: flex-start;
 }
 
-.filme-principal .descricao {
+.aula-principal .descricao {
     margin-bottom: 40px;
 }
 
 .titulo {
     margin-top: 15%;
     font-size: 40px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Anton;
 }
 
 .botao {
@@ -87,11 +92,22 @@ header nav a:hover {
     margin-right: 10px;
 }
 
-.box-filme {
+.box-meditation {
     height: 100%;
     width: 100%;
 }
 
-.carousel-filmes {
+.carousel-meditations {
     margin-top: 5px;
+}
+
+
+
+.owl-carousel .item:hover {
+    border: 5px solid white;
+    transition: .1s ease all;
+}
+
+.container {
+    margin-left: 15px;
 }
